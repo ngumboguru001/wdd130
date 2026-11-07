@@ -1,29 +1,82 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0 40px;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* Limit the main content width */
 main {
     max-width: 840px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* Style profile images inside main */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(0 110 182);
+    padding-bottom: 5px;
+}
+
+/* Style profile images inside main and float right */
 main img {
     width: 150px;
     height: auto;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 /* Reset or adjust paragraph padding */
 p {
     padding: 0;
+    margin-bottom: 1rem;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+    border-radius: 4px;
 }
 
 /* Style the aside section */
 aside {
+    position: relative;
     width: 20rem;
     margin: 1rem auto;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
     text-align: center;
+}
+
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
 }
 
 /* Style the image inside the aside */
