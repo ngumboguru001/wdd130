@@ -1,0 +1,297 @@
+/* =========================================
+   1. CSS VARIABLES
+========================================= */
+
+:root {
+    --primary-color: #055a8c;
+    --secondary-color: #f4a261;
+    --accent1-color: #073b4c;
+    --accent2-color: #e9c46a;
+
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================
+   2. UNIVERSAL SELECTOR
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   3. BODY
+========================================= */
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: #ffffff;
+}
+
+/* =========================================
+   4. HEADER, MAIN AND FOOTER WIDTH
+========================================= */
+
+header,
+main,
+footer {
+    width: 840px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* =========================================
+   5. HEADER
+========================================= */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+header > img {
+    width: 160px;
+    height: auto;
+}
+
+/* =========================================
+   6. NAVIGATION
+========================================= */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: var(--accent2-color);
+    text-decoration: underline;
+}
+
+/* =========================================
+   7. HEADINGS
+========================================= */
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* =========================================
+   8. GENERAL ELEMENT SPACING
+========================================= */
+
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* =========================================
+   9. HERO SECTION
+========================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   10. HERO HEADING OVERLAY
+========================================= */
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.85;
+    background-color: var(--accent1-color);
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+/* =========================================
+   11. HERO ARTICLE OVERLAY
+========================================= */
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 2%;
+    width: 96%;
+    margin: 0;
+    padding: 16px;
+    background-color: rgb(255 255 255 / 90%);
+    color: var(--accent1-color);
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.hero article p {
+    margin: 0;
+    padding: 8px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   12. HERO ARTICLE IMAGE
+========================================= */
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin: 0 0 10px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* =========================================
+   13. HISTORY SECTION
+========================================= */
+
+.history {
+    margin: 20px 16px;
+    padding: 20px;
+    background-color: #f2f6f8;
+    border: 1px solid #d0dce2;
+}
+
+.history p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* =========================================
+   14. ADVENTURE SECTION
+========================================= */
+
+.adventures {
+    min-height: 130px;
+    margin: 20px 16px;
+    padding: 20px;
+    background-color: #f2f6f8;
+    border: 1px solid #d0dce2;
+}
+
+.adventures h2 {
+    margin-top: 10px;
+}
+
+/* =========================================
+   15. FOOTER
+========================================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+    padding: 8px;
+}
+
+/* =========================================
+   16. SOCIAL MEDIA
+========================================= */
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 8px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+/* =========================================
+   17. RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .hero h1 {
+        top: 10px;
+        font-size: 1.3rem;
+        padding: 8px;
+    }
+
+    .hero article {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero article img {
+        width: 100px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+}
