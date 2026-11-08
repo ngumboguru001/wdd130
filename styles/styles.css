@@ -5,51 +5,63 @@
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 0 40px;
+    background-color: #f5f5f5;
+    color: #222;
 }
 
+/* Header */
 header {
     background-color: #333;
     padding: 1rem;
 }
 
+/* Navigation */
 nav a {
     color: white;
     margin-right: 1rem;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #26b2ca;
 }
 
-/* Limit the main content width */
+/* Main Content */
 main {
     max-width: 840px;
     margin: 0 auto;
     padding: 20px;
+    background-color: white;
 }
 
+/* Main Heading */
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     border-bottom: 1px solid rgb(0 110 182);
     padding-bottom: 5px;
+    color: #034a7b;
 }
 
-/* Style profile images inside main and float right */
+/* Profile Image */
 main img {
     width: 150px;
     height: auto;
     float: right;
     margin-left: 20px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 2px;
 }
 
-/* Reset or adjust paragraph padding */
+/* Paragraphs */
 p {
     padding: 0;
     margin-bottom: 1rem;
@@ -65,30 +77,78 @@ p {
     border-radius: 4px;
 }
 
-/* Style the aside section */
+/* Aside Section */
 aside {
     position: relative;
     width: 20rem;
     margin: 1rem auto;
+    padding: 1rem;
     text-align: center;
+    background-color: #e8f4f8;
+    border: 1px solid #034a7b;
+    border-radius: 5px;
+    color: #222;
 }
 
+/* Aside Heading */
 aside h2 {
     position: absolute;
-    top: 47px;
-    left: 150px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    color: #034a7b;
+    background-color: rgb(255 255 255 / 85%);
+    padding: 5px;
+    font-size: 1.3rem;
 }
 
-/* Style the image inside the aside */
+/* Aside Image */
 aside img {
     width: 200px;
     height: auto;
+    max-width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 2px;
 }
 
-/* Style the footer */
+/* Aside Paragraph */
+aside p {
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Footer */
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
     padding: 1rem;
+    background-color: #eee;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    main img {
+        width: 120px;
+    }
+
+    aside {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
 }
