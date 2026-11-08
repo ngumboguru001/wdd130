@@ -22,6 +22,11 @@
     box-sizing: border-box;
 }
 
+.hero article {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
 /* =========================================
    3. BODY
 ========================================= */
